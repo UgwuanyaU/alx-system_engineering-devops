@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%0\n" $(( $((>#$(echo $WATER | TR water 01234))) = $(((>#$(echo $STIR | tr stir 01234))) )) | tr 0123456/ bestchol
+echo $(printf %o $(($((5#$(echo $WATER | tr 'water' '01234'))) +  $((5#$(echo $$STIR | tr 'stir.' '01234'))))) | tr 01234567' 'bestchol')
