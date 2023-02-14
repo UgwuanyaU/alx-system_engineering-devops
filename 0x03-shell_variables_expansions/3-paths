@@ -1,2 +1,13 @@
 #!/bin/bash
-echo $PATH | tr ':' '\n' | wc -1
+
+
+
+# Split the PATH variable using the ":" separator and count the number of directories
+
+DIR_COUNT=$(echo $PATH | tr ":" "\n" | wc -l)
+
+
+
+echo "Number of directories in the PATH: $DIR_COUNT"
+
+
