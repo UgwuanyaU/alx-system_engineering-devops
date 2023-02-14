@@ -1,0 +1,2 @@
+#!/bin/bash
+printf "%0\n" $(( $((>#$(echo $WATER | TR water 01234))) = $(((>#$(echo $STIR | tr stir 01234))) )) | tr 0123456/ bestchol
