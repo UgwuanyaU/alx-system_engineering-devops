@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#find the PIDS of processes containing thw word "bash"
+
+script_name=$(basename "$0")
+pids=$(pgrep -f bash)
+
+for pid in $pids; do
+	process_name=$(ps -p "$pid" -o comm=)
+	if [[ "$process_name" != "$script_name" ]]; then
+		echo "$pid $process_name"
+	fi
+done
